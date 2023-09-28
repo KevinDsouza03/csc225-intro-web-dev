@@ -2,15 +2,8 @@
 <html>
     <head>
         <title>Scarlet the Dog</title>
-        <link rel="icon" type="image/x-icon" href="assets\favicon.ico">
-        <style>
-            body {
-                background-color: gainsboro ;
-            }
-            img {
-                padding: 1%
-            }
-          </style>  
+        <link rel="icon" type="image/x-icon" href="assets\favicon.ico"> 
+        <link rel="stylesheet" href="style.css">
       </head>
       <nav>
         <a href="assets\dog-in-the-bed.jpg" alt="dog-in-the-bed">dog in the bed</a>
@@ -19,14 +12,9 @@
     <body>
         <h3> Kevin Dsouza</h3>
         <p>dog</p>
-        <img src="assets\dog-in-the-car.jpg" alt="my dog" width="300px" style="display :inline;">
-        <img src="assets\dog-on-the-deck.jpg" alt="my dog" width="300px" style="display: inline;">
-        <table style="display:inline-block ">
-            <style> 
-                table, th, td { 
-                   border: 1px solid gray; 
-                } 
-                </style>
+        <img src="assets\dog-in-the-car.jpg" alt="my dog"> 
+        <img src="assets\dog-on-the-deck.jpg" alt="the dog">
+        <table>
             <caption style="color: aquamarine"> Stats about the dog</caption>
             <tr>
                 <th>Likes</th>
@@ -41,7 +29,7 @@
                 <td>Cats</td>
              </tr>
         </table>
-        <div style="display:inline-block">
+        <div id="likes">
             <p> Places she likes to go</p>
             <ul>
                 <li>The Beach</li>
@@ -51,8 +39,10 @@
             <p> Favorite Treats</p>
             <ol type="i">
                 <li><a href="https://www.purina.com/beggin" alt='Beggin Strips'>Beggin Strips</a></li>
-                <li><img src="assets\nubz.jpg" alt="nubz peanut butter bone" width="100px"></li>
-                <li><img src="assets\churpie.jpg" alt="yak cheese" width="100px"></li>
+                <section id="treat-section">
+                    <li><img src="assets\nubz.jpg" alt="nubz peanut butter bone" width="100px"></li>
+                    <li><img src="assets\churpie.jpg" alt="yak cheese" width="100px"></li>
+                </section>
             </ol>
         </div>
         <p> Her name is Scarlet and she is a <a href="https://www.akc.org/dog-breeds/labrador-retriever/">Labrador</a>-<a href="https://en.wikipedia.org/wiki/Pit_bull">Pitbull</a> mix</p>

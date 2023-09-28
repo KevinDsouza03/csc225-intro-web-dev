@@ -1,0 +1,21 @@
+
+body {
+    background-color: gainsboro ;
+}
+
+img {
+    width: 300px;
+}
+ 
+table, th, td { 
+   border: 1px solid gray; 
+   display: inline-block;
+} 
+
+.likes {
+    display: inline-block;
+}
+.treat-section {   
+    width: 100px;
+}
+  
