@@ -3,10 +3,11 @@
 * {
     font-family: 'Poppins', cursive;
     margin: 1;
+    /* font-size: 1rem; */
 }
 
 body {
-    background-color: gainsboro ;
+    background-color: rgb(220,220,220) ;
 }
 
 caption {
@@ -24,9 +25,10 @@ img {
 }
  
 table, th, td { 
-   border: 1px solid gray; 
-   display: inline-block;
-   margin-left: 1px;
+    background: burlywood;
+    border: 1px solid gray; 
+    display: inline-block;
+    margin-left: 1px;
 } 
 
 
@@ -54,4 +56,9 @@ table, th, td {
 #treat-section {   
     width: 100px;
     display: inline;
+}
+
+#description {
+    background: wheat;
+    font-weight: 300;
 }
