@@ -3,15 +3,24 @@
 body , h1{
     background-color:#D2B48C;
     text-align: center;
+    font-family: 'Bubblegum Sans';
+    font-size: 50;
 }
 
 p {
     text-align: center;
 }
+td {
+    text-align: center;
+}
 
 table {
+    background-color: lightsalmon;
     margin-left: auto;
     margin-right: auto;
+    border: 2pt;
+    border-style: solid;
+    border-color: red;
 }
 
 
