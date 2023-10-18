@@ -1,0 +1,60 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head><title>Dog Finances</title></head>
+    <body >
+        <h1>Dog Finances</h1>
+        <p>Time to buy treats for the dog!</p>
+        <form name="dog">
+        <table>
+        <tr><!--This will be Beggin strips, so just amt included-->
+            <td><input type="button" value="1 bag" onClick="" /></td>
+            <td><input type="button" value="2 bags" onClick="" /></td>
+            <td><input type="button" value="3 bags" onClick="" /></td>
+            <td><input type="button" value="Beggin Strips" onClick="" /></td>
+        </tr>
+        <tr>
+                <!--dry food so size -->
+            <td><input type="button" value="5lbs" onClick="" /></td>
+            <td><input type="button" value="25lbs" onClick="" /></td>
+            <td><input type="button" value="50lbs" onClick="" /></td>
+            <td><input type="button" value="Dry Food" onClick="" /></td>
+        </tr>
+        <tr>
+                <!--ball so size -->
+            <td><input type="button" value="Small" onClick="" /></td>
+            <td><input type="button" value="Medium" onClick="" /></td>
+            <td><input type="button" value="jolly ball" onClick="" /></td>
+            <td><input type="button" value="Ball" onClick="" /></td>
+        </tr>
+        </table>
+        </form>
+        <script langauge = "JavaScript">
+            var item = "beggin strips";
+            var amt = 1;
+            var size = 5;
+            var price;
+            var taxRate = 0.0875;
+            if (item == "beggin strips")
+                price = 10.00;
+            if (item == "dry food") {
+                if (size == 5)
+                    price = 25.00;
+                if (size == 25)
+                    price = 65.00;
+                if (size == 50)
+                    price = 120.00;
+            }
+            if (item == "ball") {
+                if (size == 1)
+                    price = 5.00;
+                if (size == 2)
+                    price = 15.00;
+                if (size == 3)
+                    price = 30.00;
+            }
+            price = price * amt;
+            price = price + price* taxRate;
+            alert(price)
+        </script>
+    </body>
+</html>
