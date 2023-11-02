@@ -2,71 +2,88 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
     <head><title>Dog Finances</title></head>
-    <body >
+    <body id="body">
         <h1>Dog Finances</h1>
         <p>Time to buy treats for the dog!</p>
-        <form name="dog">
-        <table>
-        <tr><!--This will be Beggin strips, so just amt included-->
-            <td><input type="button" value="1 bag" onClick="" /></td>
-            <td><input type="button" value="2 bags" onClick="" /></td>
-            <td><input type="button" value="3 bags" onClick="" /></td>
-            <td><input type="button" value="Beggin Strips" onClick="" /></td>
-            <td><input type="button" value="Clear" onClick="" /></td>
-            
-        </tr>
-        <tr>
-                <!--dry food so size -->
-            <td><input type="button" value="5lbs" onClick="" /></td>
-            <td><input type="button" value="25lbs" onClick="" /></td>
-            <td><input type="button" value="50lbs" onClick="" /></td>
-            <td><input type="button" value="Dry Food" onClick="" /></td>
-        </tr>
-        <tr>
-                <!--ball so size -->
-            <td><input type="button" value="Small" onClick="" /></td>
-            <td><input type="button" value="Medium" onClick="" /></td>
-            <td><input type="button" value="jolly ball" onClick="" /></td>
-            <td><input type="button" value="Ball" onClick="" /></td>
-            <td><input type="button" value="Total" onClick="" /></td>
-        </tr>
-        <tr>
-                <!--pricing stuff-->
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="text" name="price" value="0.00" size="5" onChange=' '/></td>
-    </tr>
-        </table>
+        <form name="Dog">
+            <table>
+                <tr><!-- This will be Beggin strips, so just amt included -->
+                    <td><input type="button" value="1 bag" onClick="amt=1" /></td>
+                    <td><input type="button" value="2 bags" onClick="amt=2" /></td>
+                    <td><input type="button" value="3 bags" onClick="amt=3" /></td>
+                    <td><input type="button" value="Beggin Strips" onClick="item='beggin strips'" /></td>
+                    <td><input type="button" value="Clear" onClick="clearValues()" /></td>
+                </tr>
+                <tr><!-- Dry food so size -->
+                    <td><input type="button" value="5lbs" onClick="setSize(5)" /></td>
+                    <td><input type="button" value="25lbs" onClick="setSize(25)" /></td>
+                    <td><input type="button" value="50lbs" onClick="setSize(50)" /></td>
+                    <td><input type="button" value="Dry Food" onClick="item='dry food'" /></td>
+                </tr>
+                <tr><!-- Ball so size -->
+                    <td><input type="button" value="Small" onClick="setSize(1)" /></td>
+                    <td><input type="button" value="Medium" onClick="setSize(2)" /></td>
+                    <td><input type="button" value="jolly ball" onClick="setSize(3)" /></td>
+                    <td><input type="button" value="Ball" onClick="item='ball'" /></td>
+                    <td><input type="button" value="Total" onClick="calculateTotal()" /></td>
+                </tr>
+                <tr><!-- Pricing stuff -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="text" name="price" value="0.00" size="5" onChange=""></td>
+                </tr>
+            </table>
         </form>
         <script langauge = "JavaScript">
-            var item = "beggin strips";
+            var item = "none";
             var amt = 1;
-            var size = 5;
-            var price;
-            var taxRate = 0.0875;
-            if (item == "beggin strips")
-                price = 10.00;
-            if (item == "dry food") {
-                if (size == 5)
-                    price = 25.00;
-                if (size == 25)
-                    price = 65.00;
-                if (size == 50)
-                    price = 120.00;
+            var size = 0;
+            function setSize(s) {
+                size = s;
             }
-            if (item == "ball") {
-                if (size == 1)
-                    price = 5.00;
-                if (size == 2)
-                    price = 15.00;
-                if (size == 3)
-                    price = 30.00;
+            function calculateTotal(){
+                var price = 0.00;
+                var taxRate = 0.0875;
+                if (item == "beggin strips")
+                    price = 10.00;
+                    changeNormal();
+                if (item == "dry food") {
+                    if (size == 5)
+                        price = 25.00;
+                    if (size == 25)
+                        price = 65.00;
+                    if (size == 50)
+                        price = 120.00;
+                    changeNormal();
+                }
+                if (item == "ball") {
+                    if (size == 1)
+                        price = 5.00;
+                    if (size == 2)
+                        price = 15.00;
+                    if (size == 3)
+                        price = 45.00;
+                        changeBackground();
+                }
+                price = price * amt;
+                price = price + price* taxRate;
+                document.Dog.price.value = price.toFixed(2);
             }
-            price = price * amt;
-            price = price + price* taxRate;
-            alert(price)
+            function clearValues() {
+                amt = 1;
+                size = 0;
+                item = "none";
+                document.Dog.price.value = "0.00"
+            }
+            function changeBackground() {
+                body.style.backgroundSize = "50% 50%"; 
+                document.getElementById('body').style.backgroundImage="url(assets/dog-in-the-car.jpg)";
+            }
+            function changeNormal() {
+                document.getElementById('body').style.backgroundImage="none";
+            }
         </script>
     </body>
 </html>
