@@ -6,21 +6,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>  
-    <nav id="hamburger-nav">
+    <nav id="nav-container">
+        <h1>Ruffian Supplies</h1>
+        <ul class="nav-links">
+            <li><a href="#contact">Contact Us!</a></li>
+            <li><a href="pages/shop.html">Shop All!</a></li>
+            <li><a href="pages/profile.html">Profile</a></li>
+            <li><a href="pages/dry-food.html">Dry Food</a></li>
+            <li><a href="pages/wet-food.html">Wet Food</a></li>
+            <li><a href="pages/cart.html">Cart</a></li>
+        </ul>
+        <div class="icon">
+            <img src="https://media.istockphoto.com/id/1303506906/vector/paw-line-icon.jpg?s=612x612&w=0&k=20&c=BUfzGEx32ODVjtLRZ4tG4Zx_oQk1KNDeG5LkD8O7E4Q=" alt="Icon">
+        </div>
         <ul class="hamburger-links">
             <li><a href="#contact">Contact Us!</a></li>
             <li><a href="pages/shop.html">Shop All!</a></li>
             <li><a href="pages/profile.html">Profile</a></li>
+            <li><a href="pages/dry-food.html">Dry Food</a></li>
+            <li><a href="pages/wet-food.html">Wet Food</a></li>
         </ul>
     </nav>
-    <nav id="nav-bar">
-        <li><a href="pages/dry-food.html"></a>Dry Food</li>
-        <li><a href="pages/wet-food.html"></a>Wet Food</li>
-    </nav>
-
     <section id="about">
-        <div class="about-store">
-
+        <div class="flex-grid">
+            <div class="grid-item">
            <h1>Here at Ruffian Supplies, we care for our dogs. <br></h1>
 
             <h3>Why do we only have one canine friend? Two reasons:</h3>
@@ -32,13 +41,17 @@
                 <br> Our products are paw-chosen by our in-house canine friend, Scarlet.
                 <br> Since they are picked by a real dog, you know they are the best and healthiest treats!
             </p>
+            </div>
 
-        </div>
-        <div id="headshot-container">
-            <img src="assets\scarlet-headshot.png" alt="Scarlet the Ruffian"> <!-- Photo to the right of the description-->
+        <div id="grid-item">
+            <img class="flex-img" src="assets\dog-headshot.jpg" alt="Scarlet the Ruffian"> <!-- Photo to the right of the description-->
         </div>
 
-        <div class="about-dog">
+        <div id="grid-item">
+            <img class="flex-img" src="assets\scarlet-eating.jpg" alt="Scarlet enjoying her Ruffian Treats!"> <!-- Photo to left of about-dog-->
+        </div>
+
+        <div class="grid-item">
             <h3> Scarlet was adopted from the animal shelter at 1 year, 8 months old.</h3> <br> 
             <p>She was given up by her old owners, but not much else is known about
                 Scarlet's past.
@@ -53,16 +66,14 @@
             </p>
 
         </div>
-    </section>
 
+        </div>
+    </section>
+</body>
     <section id="contact">
-        <!-- Javascript implementation TODO-->
+        <h3>Contact Us!</h3>
         <form method="POST"action="mailto: scarlet@ruffian.com" enctype="multipart/form-data">
             <div class="form-input">
-                Full Name: 
-                <input aria-required=""
-                id="name"
-                type="text" /> <br>
                 Subject:
                 <input aria-required=""
                 id="subject"
@@ -78,25 +89,15 @@
     
 
 <footer>
-    <div id="footer-container">
-        <nav class="footer-nav">
-            <ul class="footer-nav-list"> 
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
 
-        </nav>
-
-    </div>
 <p>
     341 Barkington Street <br>
     Dogtown, Peanut Butter Land, 1337
     <br>
     Scarlet@ruffian.com
     <br>
-    Copyright © 2023 Scarlet <!-- In own container at bottom-->
+    Copyright © 2023 Scarlet
 </p>
 </footer>
 
-</body>
 </html>

@@ -1,7 +1,183 @@
+/* Index/Home page */
+
+body {
+    background-color:bisque;
+}
+.hamburger-nav {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.icon img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: tan;
+    opacity: .5;
+    z-index: 1030;
+    position: fixed;
+    top: 21px;
+    left: 1px;
+    bottom: 5px;
+}
+
+.icon img:hover {
+    opacity: 1;
+}
+
+
+.hamburger-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: tan;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000; 
+}
+
+.hamburger-links:hover {
+    opacity: 1;
+}
+
+.hamburger-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hamburger-links li {
+    padding: 10px;
+}
+
+.hamburger-links a {
+    text-decoration:wavy;
+    color: #333;
+}
+
+.hamburger-links a:hover {
+    color: #007bff;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: .75rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+/*About sections */
+
+
+
+.flex-grid {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex-wrap: wrap;
+    
+}
+
+.grid-item {
+    width: 623px;
+    height: 530px;
+    margin: .01rem;
+}
+
+.flex-img {
+    width:623px;
+    height:530px;
+}
+
+.grid-item:nth-child(odd) {
+    background-color: tan;
+}
+
+.grid-item:nth-child(even) {
+    background-color: tan;
+}
+
+/* Shop All Page */
+
+.all-name {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-right: var(--mb-2);
+    margin-bottom: var(--mb-3);
+    padding: 0.25rem 1rem;
+    background-color: var(--white-color);
+    border-radius: 0.25rem;
+
+}
+
+.all-img {
+    height: 200px;
+}
+
+
+/* Product Pages */
+
+.item-img {
+    height:200px;
+}
+
+.item-pic-container {
+    max-width: 100%; /* Set a maximum width to prevent extending to the entire viewport */
+    padding: 1.5rem;
+    background: tan;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+
+.item-text-container {
+    align-self: center;
+    text-align: center;
+}
 
 
 /* todo
+
+    NOTE:
+        On other pages, ALL id's and classes start with nameofpage-name
+
     assign hamburger-nav to left nav-bar.
     nav-bar always persistent.
     EXTRA: try to make hambrurger take all if small screen. bootstrap
+
+
+
+    Home page
+Full Layout with pictures, navigation, header section, footer section
+
+
+    ?DONE? Background on owners
+Ordering Page
+Javascript form that allows the user to build a cart of items
+when totaled adds tax and shipping fees
+Order button generates an order complete screen
+    3/4: Listed all, css and js implementation needed | Product Page
+    DONE: SHOP ALL Images and details on all products offered on the site
+Use HTML, CSS & JavaScript
+Design & Accessibility - 10%
+Make sure site looks nice and is easy to read with color choices and images have alt text for screen reader to use.
 */
