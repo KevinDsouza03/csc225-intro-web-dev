@@ -8,7 +8,7 @@ function addToCart(productId) {
     const imgElement = document.querySelector('.item-img');
 
     
-    const quantity = parseInt(quantityInput.value);
+    const quantity = parseInt(quantityInput.value) % 50;
 
     const priceElement = document.querySelector('.price');
     const floatMatch = priceElement.textContent.match(/\d+\.\d+/);
