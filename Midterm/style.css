@@ -1,8 +1,17 @@
 /* Index/Home page */
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lato:wght@300&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Caveat', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     background-color:bisque;
 }
+
 .hamburger-nav {
     display: flex;
 }
@@ -15,6 +24,7 @@ nav {
 
 .nav-links {
     display: flex;
+    margin-left: 1.5cm;
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
@@ -46,6 +56,7 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1000; 
+    width: 75px;
 }
 
 .hamburger-links:hover {
@@ -83,6 +94,9 @@ a:hover {
     text-decoration-color: rgb(181,181,181);
 }
 
+.grid-item {
+    text-align: center;
+}
 /*About sections */
 
 
@@ -91,8 +105,8 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    
 }
+
 
 .grid-item {
     width: 623px;
@@ -113,23 +127,30 @@ a:hover {
     background-color: tan;
 }
 
+.contact {
+    display: inline;
+}
 /* Shop All Page */
 
-.all-name {
+.all-item-container {
     display: inline-block;
-    font-size: var(--small-font-size);
-    margin-right: var(--mb-2);
-    margin-bottom: var(--mb-3);
-    padding: 0.25rem 1rem;
-    background-color: var(--white-color);
-    border-radius: 0.25rem;
-
+    font-size: 18px;
+    max-width: 100%; 
+    padding: 1.5rem;
+    background: tan;
+    border-radius: 2rem;
+    border: 0.1rem solid grey;
+    text-align: center;
+    margin: 1rem ; 
 }
 
 .all-img {
     height: 200px;
 }
 
+.all-box{
+    list-style: none;
+}
 
 /* Product Pages */
 
@@ -138,13 +159,14 @@ a:hover {
 }
 
 .item-pic-container {
-    max-width: 100%; /* Set a maximum width to prevent extending to the entire viewport */
+    font-size: 18px;
+    max-width: 100%; 
     padding: 1.5rem;
     background: tan;
     border-radius: 2rem;
-    border: 0.1rem solid rgb(163, 163, 163);
+    border: 0.1rem solid grey;
     text-align: center;
-    margin: 0 auto; /* Center the container horizontally */
+    margin: 0 auto; 
 }
 
 
@@ -153,6 +175,14 @@ a:hover {
     text-align: center;
 }
 
+.all-box {
+    text-align: center;
+}
+
+.shop-all {
+    text-align: center;
+    text-decoration: underline;
+}
 
 
 /* Shopping Cart */
@@ -164,7 +194,7 @@ a:hover {
 .cart-container {
     display: grid;
     justify-items: center;
-    grid-template-columns: 400px 800px;
+    grid-template-columns: 600px 1500px;
 }
 .shopping-container img {
     display: inline;
@@ -183,32 +213,52 @@ a:hover {
 
 
 
+footer {
+    position: flex;
+    bottom: 0;
+    left:0;
+    right:0;
+    text-align: center;
+}
 
+@media (max-width: 760px) {
+    .grid-item {
+        width: 723px;
+        height: 530px;
+        margin: .01rem;
+    }
+    
+    .flex-img {
+        width:723px;
+        height:530px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .grid-item {
+        width: 950px;
+        height: 530px;
+        margin: .01rem;
+    }
+    
+    .flex-img {
+        width:950px;
+        height:530px;
+    }
+}
 
 
 /* todo
 
+
+    actual todo:
+        cart and order page, see if can put li elements in own div's for styling in JS.
     NOTE:
         On other pages, ALL id's and classes start with nameofpage-name
+        I did not follow this at all
 
-    assign hamburger-nav to left nav-bar.
-    nav-bar always persistent.
+    Meh? assign hamburger-nav to left nav-bar.
+    Meh? nav-bar always persistent.
     EXTRA: try to make hambrurger take all if small screen. bootstrap
 
-
-
-    Home page
-Full Layout with pictures, navigation, header section, footer section
-
-
-    ?DONE? Background on owners
-Ordering Page
-Javascript form that allows the user to build a cart of items
-when totaled adds tax and shipping fees
-Order button generates an order complete screen
-    3/4: Listed all, css and js implementation needed | Product Page
-    DONE: SHOP ALL Images and details on all products offered on the site
-Use HTML, CSS & JavaScript
-Design & Accessibility - 10%
-Make sure site looks nice and is easy to read with color choices and images have alt text for screen reader to use.
 */

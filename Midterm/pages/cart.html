@@ -2,10 +2,20 @@
 <html>
     <head>
         <title>Cart - Ruffian Supplies</title>
-        <link rel="icon" type="'image/x-icon" href="assets\favicon.ico">
+        <link rel="icon" type="'image/x-icon" href="../assets/favicon-16x16.png">
         <link rel="stylesheet" href="..\style.css">
     </head>
     <nav id="nav-container">
+        <h1>Ruffian Supplies</h1>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#contact">Contact Us!</a></li>
+            <li><a href="shop.html">Shop All!</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="dry-food.html">Dry Food</a></li>
+            <li><a href="wet-food.html">Wet Food</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
         <div class="icon">
             <img src="https://media.istockphoto.com/id/1303506906/vector/paw-line-icon.jpg?s=612x612&w=0&k=20&c=BUfzGEx32ODVjtLRZ4tG4Zx_oQk1KNDeG5LkD8O7E4Q=" alt="Icon">
         </div>
@@ -16,7 +26,7 @@
             <li><a href="profile.html">Profile</a></li>
             <li><a href="dry-food.html">Dry Food</a></li>
             <li><a href="wet-food.html">Wet Food</a></li>
-            <li><a href="cart.html">Cart</a</li>
+            <li><a href="cart.html">Cart</a></li>
         </ul>
     </nav>
 
@@ -32,8 +42,13 @@
                 </div>
                 <div class="order-container">
                     <h1> All Done?</h1>
+                    <p id="subtotal"></p>
+                    <p id="tax-price"></p>
+                    <p id="shipping-text">Shipping: $8.99</p>
                     <p id="final-price"></p>
-                    <a href='order-confirmation.html'><button class="order-btn" onClick="">Place Order</button></a>
+                    <a href='order-confirmation.html'>
+                        <button class="order-btn" onClick="">Place Order</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,13 +70,17 @@
                 cartList.appendChild(listItem);
                 cartList.appendChild(imgItem);
             }
-            total_price += total_price * .0875;
+            tax = total_price * .0875;
+            pre_tax = total_price.toFixed(2);
+            total_price += tax + 8.99;
             total_price = total_price.toFixed(2)
-            document.getElementById('final-price').innerHTML = total_price
+            document.getElementById('subtotal').innerHTML = `Subtotal: $${pre_tax}`
+            document.getElementById('final-price').innerHTML = `Total: $${total_price}`;
+            document.getElementById('tax-price').innerHTML =  `Tax: $${tax.toFixed(2)}`;
 
         </script>
     </body>
-    
+<footer>
 <p>
     341 Barkington Street <br>
     Dogtown, Peanut Butter Land, 1337
