@@ -99,7 +99,9 @@ a:hover {
 }
 /*About sections */
 
-
+.about-list {
+    list-style-type: disc;
+}
 
 .flex-grid {
     display: grid;
