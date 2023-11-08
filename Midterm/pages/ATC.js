@@ -37,27 +37,3 @@ function addToCart(productId) {
    
     alert(`Added ${quantity} of ${productInfo.name} to the cart.`);
 }
-
-    // const jsonPath = 'cart.json';
-
-    // fetch(jsonPath)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         if (data[id]) {
-    //             data[id].quantity = quantity;
-    //         }
-    //         else {
-    //             console.log('Not valid product: ')
-    //         }
-
-    //     return fetch(jsonPath, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(data),
-
-    //     });
-    // })
-
-

@@ -88,10 +88,9 @@ a:hover {
 
 
 .flex-grid {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    flex-wrap: wrap;
     
 }
 
@@ -157,10 +156,36 @@ a:hover {
 
 
 /* Shopping Cart */
-.flex-item img {
+
+.cart-grid {
+    text-align: center;
+}
+
+.cart-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 400px 800px;
+}
+.shopping-container img {
+    display: inline;
     width: 50px;
     height: 50px;
+    padding: 10px;
 }
+
+.shopping-container {
+    display: inline;
+}
+
+.cart-list {
+    display: block;
+}
+
+
+
+
+
+
 /* todo
 
     NOTE:
