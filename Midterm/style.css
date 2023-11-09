@@ -15,12 +15,17 @@ body {
 .hamburger-nav {
     display: flex;
 }
+.top-container {
+    background: wheat;
+    border: 0.1rem solid grey;
 
+}
 nav {
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 10vh;
 }
+
 
 .nav-links {
     display: flex;
@@ -109,16 +114,13 @@ a:hover {
     grid-template-rows: repeat(2, 1fr);
 }
 
-
-.grid-item {
-    width: 623px;
-    height: 530px;
-    margin: .01rem;
-}
-
 .flex-img {
-    width:623px;
-    height:530px;
+    height: auto;
+    width: auto;
+    min-width:623px;
+    min-height:530px;
+    max-width: 1000px;
+    max-height: 1000px;
 }
 
 .grid-item:nth-child(odd) {
@@ -232,8 +234,19 @@ a:hover {
     background: wheat;
 }
 
+#subject-input, #msg-input {
+    width: 10rem;
+}
+
+
 /* Shopping Cart */
 
+
+.flex-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
 .cart-grid {
     text-align: center;
 }
@@ -280,6 +293,7 @@ a:hover {
     align-items: center;
     display: flex;
 }
+
 .item-in-cart-img img {
     float: left;
     width: 125px;
@@ -290,6 +304,7 @@ a:hover {
 .item-in-cart-text {
     padding: 1px;
 }
+
 .cart-list {
     display: block;
 }
