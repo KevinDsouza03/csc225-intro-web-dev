@@ -312,11 +312,14 @@ a:hover {
 
 
 footer {
+    margin-top: 2cm;
     position: flex;
     bottom: 0;
     left:0;
     right:0;
     text-align: center;
+    background: wheat;
+    border: 0.1rem solid grey;
 }
 
 /* @media (max-width: 760px) {
@@ -344,19 +347,3 @@ footer {
         height:530px;
     }
 } */
-
-
-/* todo
-
-
-    actual todo:
-        cart and order page, see if can put li elements in own div's for styling in JS.
-    NOTE:
-        On other pages, ALL id's and classes start with nameofpage-name
-        I did not follow this at all
-
-    Meh? assign hamburger-nav to left nav-bar.
-    Meh? nav-bar always persistent.
-    EXTRA: try to make hambrurger take all if small screen. bootstrap
-
-*/
