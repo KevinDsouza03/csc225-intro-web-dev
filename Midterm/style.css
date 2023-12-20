@@ -6,9 +6,12 @@
     font-family: 'Caveat', cursive;
     font-family: 'Lato', sans-serif;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
 }
 
 body {
+    margin-top: 12vh;
     background-color:bisque;
 }
 
@@ -18,10 +21,17 @@ body {
 .top-container {
     background: wheat;
     border: 0.1rem solid grey;
-
+    align-items: center;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1.5px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
 nav {
-    justify-content: space-around;
     align-items: center;
     height: 10vh;
 }
@@ -29,11 +39,12 @@ nav {
 
 .nav-links {
     display: flex;
-    margin-left: 2cm;
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    display: inline-flex;
 }
+
 
 .icon img {
     margin-left: 5px;
@@ -99,9 +110,6 @@ a:hover {
     text-decoration-color: black;
 }
 
-.grid-item {
-    text-align: center;
-}
 /*About sections */
 
 .about-list {
@@ -110,18 +118,26 @@ a:hover {
 
 .flex-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .flex-img {
     height: auto;
-    width: auto;
-    min-width:623px;
-    min-height:530px;
-    max-width: 1000px;
-    max-height: 1000px;
+    width: 45%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    border: .1rem solid gray;
 }
+.grid-item {
+    padding: 2rem;
+    font-size: 135%;
+    letter-spacing: 1.25px;
+    display:inline-flex;
+    text-align: center;
+    margin: .25rem ; 
+    border: 0.1rem solid gray;
+}
+
 
 .grid-item:nth-child(odd) {
     background-color: tan;
@@ -175,8 +191,10 @@ a:hover {
 
 
 .item-text-container {
+    font-size: 1.2em;
     align-self: center;
     text-align: center;
+    line-height: 1.5rem;
 }
 
 .all-box {
@@ -248,17 +266,20 @@ a:hover {
     grid-template-rows: repeat(2, 1fr);
 }
 .cart-grid {
+    display: block;
     text-align: center;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .cart-container {
     display: grid;
-    justify-items: center;
     grid-template-columns: 540px 707px;
 }
 
 .order-container {
-    display: flex;
+    display: block;
     border-radius: 1rem;
     border: .1rem solid tan;
     padding: 1rem;
@@ -281,7 +302,8 @@ a:hover {
 }
 
 .item-in-cart-container {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 20px;
     max-width: 100%; 
     padding: .5rem;
     background: tan;
@@ -312,6 +334,7 @@ a:hover {
 
 
 footer {
+    font-size: 1.5rem;
     margin-top: 2cm;
     position: flex;
     bottom: 0;
